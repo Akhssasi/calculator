@@ -10,11 +10,6 @@
     <div class="calculator">
         <input  style="border: black solid 1px; border-radius: 5px;" type="text" id="result" disabled >
 
-
-
-
-
-
         <div class="row">
             <div class="button"><input id="clears" type="button" value="C"       onclick="clearResult('C')">          </div>
             <div class="button"><input  type="button" value="&#9003;" onclick="deleteCharacter('&#9003;')"></div>
@@ -51,33 +46,6 @@
         </div>
     </div>
 
-    <script>
-        /* نفس الكود Javascript في المثال السابق */
-        function appendNumber(number) {
-            document.getElementById('result').value += number;
-        }
-
-        function appendOperator(operator) {
-            document.getElementById('result').value += operator;
-        }
-
-        function calculate() {
-            try {
-                var result = eval(document.getElementById('result').value);
-                document.getElementById('result').value = result;
-            } catch (error) {
-                document.getElementById('result').value = 'Error';
-            }
-        }
-
-        function deleteCharacter() {
-            var result = document.getElementById('result').value;
-            document.getElementById('result').value = result.slice(0, -1);
-        }
-
-        function clearResult() {
-            document.getElementById('result').value = '';
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
